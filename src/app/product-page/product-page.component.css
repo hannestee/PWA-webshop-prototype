@@ -1,0 +1,23 @@
+.breadcrumb{
+    background-color: #343a40;
+}
+
+.breadcrumb-item.active{
+    color: #fff;
+}
+
+.breadcrumb-link{
+    color: #929292;
+    text-decoration: none;
+}
+
+h1{
+    float:right;
+}
+
+h2{
+}
+
+img {
+    margin-top: 15px;
+}
