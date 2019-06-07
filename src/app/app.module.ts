@@ -13,7 +13,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
 /* Add necessary AngularFire modules */
 import { AngularFireModule } from '@angular/fire/';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/firestore';
 
 import {environment} from '../environments/environment';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -37,7 +37,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     AngularFireAuthModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [{ provide: FirestoreSettingsToken, useValue: {} }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
